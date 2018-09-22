@@ -1,4 +1,4 @@
-In your `AT.sqf` find these lines:
+On line 289 or so of `AT.sqf` find this code block:
 ```sqf
 			adminadd = adminadd + ["  Force Disconnect (Self)",{(findDisplay 46) closeDisplay 0;},"0","0","0","0",[]];
 		};

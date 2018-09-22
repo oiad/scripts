@@ -3,7 +3,9 @@ This assumes your WAI missions are located in this directory:
 \z\addons\dayz_server\WAI\missions\bandit\
 ```
 This assumes your event addons (ikea, military and treasure) are located in:
-```\z\addons\dayz_server\addons\```
+```
+\z\addons\dayz_server\addons\
+```
 
 This assumes your DZMS missions are located: 
 ```\z\addons\dayz_server\DZMS\missions\minor\

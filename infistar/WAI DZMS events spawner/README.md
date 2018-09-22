@@ -1,3 +1,15 @@
+This assumes your WAI missions are located in this directory:
+```\z\addons\dayz_server\WAI\missions\hero\
+\z\addons\dayz_server\WAI\missions\bandit\
+```
+This assumes your event addons (ikea, military and treasure) are located in:
+```\z\addons\dayz_server\addons\```
+
+This assumes your DZMS missions are located: 
+```\z\addons\dayz_server\DZMS\missions\minor\
+\z\addons\dayz_server\DZMS\missions\major\
+```
+
 On line 289 or so of `AT.sqf` find this code block:
 ```sqf
 			adminadd = adminadd + ["  Force Disconnect (Self)",{(findDisplay 46) closeDisplay 0;},"0","0","0","0",[]];
@@ -117,16 +129,4 @@ Add this code block after it:
 				execVM format ["\z\addons\dayz_server\DZMS\missions\%1\%2.sqf",_mtype,_mname];
 			};
 		};
-```
-
-This assumes your WAI missions are located in this directory:
-```\z\addons\dayz_server\WAI\missions\hero\
-\z\addons\dayz_server\WAI\missions\bandit\
-```
-This assumes your event addons (ikea, military and treasure) are located in:
-```\z\addons\dayz_server\addons\```
-
-This assumes your DZMS missions are located: 
-```\z\addons\dayz_server\DZMS\missions\minor\
-\z\addons\dayz_server\DZMS\missions\major\
 ```

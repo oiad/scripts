@@ -19,21 +19,20 @@ Add this code block after it:
 		if (_option == 8100) then {
 			diag_log format ["%1 (%2) Killed all AI @%3 %4",name (_array select 1),getPlayerUID (_array select 1),mapGridPosition (_array select 1),getPosATL (_array select 1)];
 
-			_nearBy = (position (_array select 1)) nearEntities ["StaticWeapon",500];
+			_nearBy = ((position (_array select 1)) nearEntities ["LandVehicle",500]);
 
 			{
-				if (!isPlayer _x) then {_x setDamage 1;};
+				_crew = crew _x;
+				if (count _crew > 0 && {!((_array select 1) in _crew)}) then {
+					{if (!isPlayer _x) then {_x setDamage 1;};} forEach _crew;
+					_x setDamage 1;
+				};
 			} forEach _nearBy;
 
-			[(_array select 1)] spawn {
-				_player = _this select 0;
-				uiSleep 2;
+			_nearBy = (position (_array select 1)) nearEntities ['CAManBase',500];
 
-				_nearBy = (position _player) nearEntities ['CAManBase',500];
-
-				{
-					if (!isPlayer _x && {!(typeOf (_x) in serverTraders)} && {_x != _player}) then {_x setDamage 1;};
-				} forEach _nearBy;
-			};
+			{
+				if (!isPlayer _x && {!(typeOf (_x) in serverTraders)} && {_x != (_array select 1)}) then {_x setDamage 1;};
+			} forEach _nearBy;
 		};
 ```

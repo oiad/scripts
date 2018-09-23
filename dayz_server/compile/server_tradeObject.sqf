@@ -28,7 +28,9 @@ _watchClasses = ["ItemBriefcase100oz","ItemTopaz","ItemObsidian","ItemSapphire",
 _watchNumber = 6;
 
 if (_quantity >= _watchNumber && {_className in _watchClasses} && {_buyOrSell == 1}) then {
+	_message = format ["%1 (%2) could be duping! Selling %3x %4",_name,_playerUID,_quantity,_className];
 	diag_log _message;
+	//["dupers",_message] call fnc_log;
 };
 
 if (_buyorsell == 0) then { // Buy
@@ -38,6 +40,7 @@ if (_buyorsell == 0) then { // Buy
 };
 
 diag_log _message;
+//["trader_log",_message] call fnc_log;
 
 if (DZE_ConfigTrader) then {
 	_outcome = "PASS";

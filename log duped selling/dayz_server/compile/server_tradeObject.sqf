@@ -24,8 +24,8 @@ if (count _this > 7) then {
 
 if (typeName _currency  == "STRING") then {_price = format ["%1 %2",_price,_currency];};
 
-_watchClasses = ["ItemBriefcase100oz","ItemTopaz","ItemObsidian","ItemSapphire","ItemAmethyst","ItemEmerald","ItemCitrine","ItemRuby"];
-_watchNumber = 6;
+_watchClasses = ["ItemBriefcase100oz","ItemTopaz","ItemObsidian","ItemSapphire","ItemAmethyst","ItemEmerald","ItemCitrine","ItemRuby"]; // Items to be logged
+_watchNumber = 6; // Minimum number of quantity before logging occurs
 
 if (_quantity >= _watchNumber && {_className in _watchClasses} && {_buyOrSell == 1}) then {
 	_message = format ["%1 (%2) could be duping! Selling %3x %4",_name,_playerUID,_quantity,_className];

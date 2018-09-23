@@ -122,7 +122,7 @@ Add this code block after it:
 			if (_mtype == "hero" || {_mtype == "bandit"}) then {
 				diag_log format ["%1 (%2) Spawning mission [%3] %4",name (_array select 1),getPlayerUID (_array select 1),_mtype,_mname];
 				wai_mission_markers set [(count wai_mission_markers), format ["Main%1%2",_mtype,count(wai_mission_data)]];
-				wai_mission_data = wai_mission_data + [[0,"",[],[0,0,0]]];
+				if (isNil "ai_show_count") then {wai_mission_data = wai_mission_data + [[0,"",[],[0,0,0]]];} else {wai_mission_data = wai_mission_data + [[0,[],[],[],[]]]};
 				execVM format ["\z\addons\dayz_server\WAI\missions\%1\%2.sqf",_mtype,_mname];
 			};
 			if (_mtype == "event") then {

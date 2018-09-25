@@ -32,7 +32,7 @@ Add this code block after it:
 			_nearBy = (position (_array select 1)) nearEntities ['CAManBase',500];
 
 			{
-				if (!isPlayer _x && {!(typeOf (_x) in serverTraders)} && {_x != (_array select 1)}) then {_x setDamage 1;};
+				if (!isPlayer _x && {!(typeOf (_x) in serverTraders)} && {_x != (_array select 1)} && {!(_x isKindOf "zZombie_base")}) then {_x setDamage 1;};
 			} forEach _nearBy;
 		};
 ```

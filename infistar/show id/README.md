@@ -44,7 +44,7 @@ in your `AT.sqf` around line 4661, find this code block:
 Replace it with this code block:
 ```sqf
 	admin_showid = {
-		private ["_target","_charID","_targetID","_ownerUID","_pos","_dir","_gps","_message","_typeOf","_vehID","_colors","_key","_displayName","_extra","_lockCode","_lockColor","_lockBoxes","_friends"];
+		private ["_target","_charID","_targetID","_ownerUID","_pos","_dir","_gps","_message","_typeOf","_vehID","_key","_displayName","_extra","_lockCode","_lockColor","_lockBoxes","_friends"];
 
 		_target = cursorTarget;
 
@@ -79,7 +79,7 @@ Replace it with this code block:
 		if (DZE_permanentPlot && {_typeOf == "Plastic_Pole_EP1_DZ"}) then {
 			_friends = _target getVariable ["plotfriends",[]];
 		};
-		
+
 		if (_typeOf in DZE_DoorsLocked || {_typeOf in DZE_LockableStorage}) then {
 			_lockBoxes = ["LockboxStorage","LockboxStorageLocked"];
 			if (_typeOf in _lockBoxes) then {
@@ -97,8 +97,7 @@ Replace it with this code block:
 		} else {
 			_vehID = parseNumber _charID;
 			if (((_target isKindOf "LandVehicle") || (_target isKindOf "Air") || (_target isKindOf "Ship")) && {_vehID > 0}) then {
-				_colors = ["Green", "Red", "Blue", "Yellow", "Black"];
-				_key = format["ItemKey%1%2", _colors select floor(_vehID / 2500), (_vehID - (floor(_vehID / 2500) * 2500))];
+				_key = format["ItemKey%1%2", dze_keyColors select floor(_vehID / 2500), (_vehID - (floor(_vehID / 2500) * 2500))];
 				_displayName = (getText (configFile >> "CfgWeapons" >> _key >> "displayName"));
 				_message = format["%1, @%4 [%2,%3], charID: %5, objID: %6, Key: %7 (%8)",_typeOf,_dir,_pos,_gps,_charID,_targetID,_displayName,_key];
 				if (_ownerUID != "0") then {_message = _message + format [", ownerPUID: %1",_ownerUID]};
@@ -107,6 +106,9 @@ Replace it with this code block:
 
 		systemChat _message;
 		diag_log _message;
+		
+		PVAH_WriteLogReq = [player,toArray (format ["%1 (%2) showID: %3",name player,dayz_playerUID,_message])];
+		publicVariableServer 'PVAH_WriteLogReq';
 
 		if (count _friends > 0) then {
 			systemchat format ["Users in %1 access list:",_typeOf];

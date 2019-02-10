@@ -1,4 +1,4 @@
-private ["_time","_vehicle","_removed","_vehType","_finished","_pos","_message","_humanity","_nearby","_plotOwner"];
+private ["_time","_vehicle","_removed","_vehType","_finished","_pos","_message","_humanity"];
 _vehicle = _this select 3;
 
 if (dayz_actionInProgress) exitWith {localize "STR_EPOCH_PLAYER_32" call dayz_rollingMessages;};
@@ -25,8 +25,6 @@ if (_removed == 1) then {
 	_humanity = player getVariable["humanity",0];
 	player setVariable ["humanity",(_humanity - 100),true];
 	
-	_nearby = [player,600] call fnc_nearBy;
-	_plotOwner = player call fnc_nearPlot;
 	if ((random 10) <= 5) then {
 		PVDZE_veh_Lock = [_vehicle,false];
 		_time = diag_tickTime;
@@ -38,11 +36,11 @@ if (_removed == 1) then {
 			//Wait for lock status to update over network (can take up to a few seconds)
 			waitUntil {uiSleep 0.1;(!locked _vehicle or (diag_tickTime - _time > 4))};
 		};
-		_message = format ["%1 (%2) hotwired a %3 (charID: %8) @%4 %5 nearby: %6 Plot Owner: %7",dayz_playerName,dayz_playerUID, typeOf _vehicle, mapGridPosition _pos,_pos,_nearby,_plotOwner, _vehicle getVariable ["CharacterID","0"]];
+		_message = format ["%1 (%2) hotwired a %3 (charID: %8) @%4 %5",dayz_playerName,dayz_playerUID, typeOf _vehicle, mapGridPosition _pos,_pos,_vehicle getVariable ["CharacterID","0"]];
 		format [localize "STR_EPOCH_PLAYER_33_OK",_vehType] call dayz_rollingMessages;
 		_vehicle setVariable ["hotwired",true,true];
 	} else {
-		_message = format ["%1 (%2) failed to hotwire %3 (charID: %8) @%4 %5 nearby: %6 Plot Owner: %7",dayz_playerName,dayz_playerUID, typeOf _vehicle, mapGridPosition _pos,_pos,_nearby,_plotOwner, _vehicle getVariable ["CharacterID","0"]];
+		_message = format ["%1 (%2) failed to hotwire %3 (charID: %8) @%4 %5",dayz_playerName,dayz_playerUID, typeOf _vehicle, mapGridPosition _pos,_pos,_vehicle getVariable ["CharacterID","0"]];
 		format [localize "STR_EPOCH_PLAYER_33",_vehType] call dayz_rollingMessages;
 	};
 	["hotwire",_message,true] call fnc_log;

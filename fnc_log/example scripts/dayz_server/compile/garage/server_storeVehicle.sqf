@@ -87,6 +87,6 @@ deleteVehicle _vehicle;
 
 if (!isNull _player) then {_clientID publicVariableClient "PVDZE_storeVehicleResult";};
 
-_message = format["GARAGE: %1 (%2) stored %3 @%4 %5 inventory: %6",_name,_playerUID,_class,mapGridPosition _player,getPosATL _player,_inventory call fnc_parseInventory];
+_message = format["GARAGE: %1 (%2) stored %3 @%4 %5",_name,_playerUID,_class,mapGridPosition _player,getPosATL _player];
 diag_log _message;
 ["garage",_message] call fnc_Log;

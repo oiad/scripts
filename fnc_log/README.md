@@ -6,6 +6,7 @@ Special thanks to [@dtavana / TwiSt#7777](https://github.com/dtavana/LogDLL) for
 
 * All logfiles will be placed in <code>Logs\<filename>_DD-MM-YYYY.txt</code>
 * 3rd param is boolean, defaults to false for displaying to server RPT.
+* https://github.com/oiad/LogDLL is my fork of @dtavana repo
 
 Syntax:
 

@@ -2,7 +2,7 @@
 Modular server/client logging function with logging DLL
 
 Credits:
-Special thanks to [@dtavana / TwiSt#7777](https://github.com/dtavana/LogDLL) for providing the logging DLL and source
+* Special thanks to [@dtavana / TwiSt#7777](https://github.com/dtavana/LogDLL) for providing the logging DLL and source
 
 * All logfiles will be placed in <code>Logs\<filename>_DD-MM-YYYY.txt</code>
 * 3rd param is boolean, defaults to false for displaying to server RPT.
@@ -11,9 +11,9 @@ Special thanks to [@dtavana / TwiSt#7777](https://github.com/dtavana/LogDLL) for
 Syntax:
 
 ```sqf
-	_fileName = toLower (_this select 0);
-	_message = _this select 1;
-	_display = if (count _this > 2) then {_this select 2} else {false};
+_fileName = toLower (_this select 0);
+_message = _this select 1;
+_display = if (count _this > 2) then {_this select 2} else {false};
 ```
 
 ```sqf
@@ -26,6 +26,13 @@ _message = format ["%1 (%2) failed to hotwire %3 (charID: %8) @%4 %5 nearby: %6 
 ["hotwire",_message,true] call fnc_log;
 ```
 
+```sqf
+_message = format["GARAGE: %1 (%2) stored %3 @%4 %5",_name,_playerUID,_class,mapGridPosition _player,getPosATL _player];
+diag_log _message;
+
+["garage",_message] call fnc_Log;
+```
+
 # REPORTING ERRORS/PROBLEMS
 
 1. Please, if you report issues can you please attach (on pastebin or similar) your CLIENT rpt log file as this helps find out the errors very quickly. To find this logfile:
@@ -34,6 +41,13 @@ _message = format ["%1 (%2) failed to hotwire %3 (charID: %8) @%4 %5 nearby: %6 
 	C:\users\<YOUR WINDOWS USERNAME>\AppData\Local\Arma 2 OA\ArmA2OA.RPT
 	```
 
+# Index:
+
+* [Arma 2 OA install](https://github.com/oiad/scripts/tree/master/fnc_log#arma-2-oa-install)
+* [Mission folder install](https://github.com/oiad/scripts/tree/master/fnc_log#mission-folder-install)
+* [dayz_server folder install](https://github.com/oiad/scripts/tree/master/fnc_log#dayz_server-folder-install)
+* [Battleye filter install](https://github.com/oiad/scripts/tree/master/fnc_log#battleye-filter-install)
+	
 # Arma 2 OA install:
 
 1. Copy <code>LogDLL.dll</code> from the repo to your Arma2 OA root directory

@@ -75,7 +75,7 @@ diag_log _message;
 
 # Daily folder rotation
 
-1. Copy the specific date format <code>LogDLL (dd-MM-yyyy, MM-dd-yyyy or yyyy-MM-dd)</code> to your Arma 2 OA directory, this will then make a daily log directory in <code>Logs\</code> i.e:
+1. Copy the specific date format <code>LogDLL (dd-MM-yyyy, MM-dd-yyyy or yyyy-MM-dd)</code> to your Arma 2 OA directory, this will then make a daily log directory in <code>Logs\\</code> i.e:
 ```
 Logs\10-02-2019\login_10-02-2019.txt
 Logs\10-02-2019\hotwire_10-02-2019.txt

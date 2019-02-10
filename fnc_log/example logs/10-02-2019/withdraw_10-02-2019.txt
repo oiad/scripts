@@ -1,0 +1,1 @@
+10-02-2019 23:19:55 | salival (76561197999617086) withdrew 33,333 Coins from VaultStorage (balance: 0) @068066 [6875.38,8731.18,0.00180054]

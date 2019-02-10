@@ -1,0 +1,2 @@
+10-02-2019 23:16:43 | salival (76561197999617086) attached hilux1_civil_1_open_DZE (charID: 0) with GAZ_Vodnik_DZ @099065 [9987.98,8814.85,0.709656] nearby: None nearPlot: None
+10-02-2019 23:16:55 | salival (76561197999617086) untowed hilux1_civil_1_open_DZE (charID: 0) with GAZ_Vodnik_DZ @099065 [9988.45,8815.05,0.0266113] nearby: None nearPlot: None

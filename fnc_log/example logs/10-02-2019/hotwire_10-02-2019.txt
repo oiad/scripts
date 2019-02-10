@@ -1,0 +1,4 @@
+10-02-2019 23:15:10 | salival (76561197999617086) failed to hotwire GAZ_Vodnik_DZ (charID: 8401) @070055 [7090.22,9852.85,0.0223389] nearby: None Plot Owner: None
+10-02-2019 23:15:12 | salival (76561197999617086) failed to hotwire GAZ_Vodnik_DZ (charID: 8401) @070055 [7090.22,9852.85,0.0223389] nearby: None Plot Owner: None
+10-02-2019 23:15:14 | salival (76561197999617086) failed to hotwire GAZ_Vodnik_DZ (charID: 8401) @070055 [7090.22,9852.85,0.0223389] nearby: None Plot Owner: None
+10-02-2019 23:15:15 | salival (76561197999617086) hotwired a GAZ_Vodnik_DZ (charID: 8401) @070055 [7090.22,9852.85,0.0223389] nearby: None Plot Owner: None

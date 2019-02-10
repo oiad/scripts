@@ -21,7 +21,7 @@ _display = if (count _this > 2) then {_this select 2} else {false};
 ```
 
 ```sqf
-_message = format ["%1 (%2) failed to hotwire %3 (charID: %8) @%4 %5 nearby: %6 Plot Owner: %7",dayz_playerName,dayz_playerUID, typeOf _vehicle, mapGridPosition _pos,_pos,_nearby,_plotOwner, _vehicle getVariable ["CharacterID","0"]];
+_message = format ["%1 (%2) failed to hotwire %3 (charID: %6) @%4 %5",dayz_playerName,dayz_playerUID, typeOf _vehicle, mapGridPosition _pos,_pos,_vehicle getVariable ["CharacterID","0"]];
 
 ["hotwire",_message,true] call fnc_log;
 ```

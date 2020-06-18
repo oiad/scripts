@@ -102,7 +102,6 @@ On line 5468 or so of `AH.sqf` find this code block:
 			};
 		} forEach playableUnits;
 	};
-};
 ```
 
 Add this code block after it:

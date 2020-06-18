@@ -586,5 +586,4 @@ Add this code block after it:
                 };
         } forEach playableUnits;
     };
-};
 ```

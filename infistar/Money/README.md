@@ -53,14 +53,14 @@ if(!isNil "adminshowdinheiromenu")then
 		adminadd = adminadd + ["  Give +40.000.000 coins",adminGiveCoins7,"0","0","0","1",[0.56,0.93,0.56,1]]; // Give 40.000.000
 		adminadd = adminadd + ["  Give +80.000.000 coins",adminGiveCoins8,"0","0","0","1",[0.56,0.93,0.56,1]]; // Give 80.000.000
 		adminadd = adminadd + ["","","0","1","0","0",[]];
-		adminadd = adminadd + ["  Give +1.000 coins para o Bank",adminGiveCoinsToBank,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 10.000 to Bank	
-		adminadd = adminadd + ["  Give +10.000 coins para o Bank",adminGiveCoinsToBank2,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 1.000.000 to Bank	
-		adminadd = adminadd + ["  Give +100.000 coins para o Bank",adminGiveCoinsToBank3,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 10.000 to Bank	
-		adminadd = adminadd + ["  Give +1.000.000 coins para o Bank",adminGiveCoinsToBank4,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 1.000.000 to Bank
-		adminadd = adminadd + ["  Give +10.000.000 coins para o Bank",adminGiveCoinsToBank5,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 1.000.000 to Ban
-		adminadd = adminadd + ["  Give +20.000.000 coins para o Bank",adminGiveCoinsToBank6,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 1.000.000 to Bank
-		adminadd = adminadd + ["  Give +40.000.000 coins para o Bank",adminGiveCoinsToBank7,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 1.000.000 to Bank
-		adminadd = adminadd + ["  Give +80.000.000 coins para o Bank",adminGiveCoinsToBank8,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 1.000.000 to Bank		
+		adminadd = adminadd + ["  Give +1.000 coins to Bank",adminGiveCoinsToBank,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 10.000 to Bank	
+		adminadd = adminadd + ["  Give +10.000 coins to Bank",adminGiveCoinsToBank2,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 1.000.000 to Bank	
+		adminadd = adminadd + ["  Give +100.000 coins to Bank",adminGiveCoinsToBank3,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 10.000 to Bank	
+		adminadd = adminadd + ["  Give +1.000.000 coins to Bank",adminGiveCoinsToBank4,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 1.000.000 to Bank
+		adminadd = adminadd + ["  Give +10.000.000 coins to Bank",adminGiveCoinsToBank5,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 1.000.000 to Ban
+		adminadd = adminadd + ["  Give +20.000.000 coins to Bank",adminGiveCoinsToBank6,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 1.000.000 to Bank
+		adminadd = adminadd + ["  Give +40.000.000 coins to Bank",adminGiveCoinsToBank7,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 1.000.000 to Bank
+		adminadd = adminadd + ["  Give +80.000.000 coins to Bank",adminGiveCoinsToBank8,"0","0","0","1",[0.98,0.98,0.82,1]]; // Give 1.000.000 to Bank		
 		adminadd = adminadd + ["","","0","1","0","0",[]];
 		adminadd = adminadd + ["  Remove +1.000 coins",adminTakeCoins,"0","0","0","1",[0.91,0.59,0.48,1]]; // Remove 10.000
 		adminadd = adminadd + ["  Remove +10.000 coins",adminTakeCoins2,"0","0","0","1",[0.91,0.59,0.48,1]]; // Remove 1.000.000
@@ -71,14 +71,14 @@ if(!isNil "adminshowdinheiromenu")then
 		adminadd = adminadd + ["  Remove +40.000.000 coins",adminTakeCoins7,"0","0","0","1",[0.91,0.59,0.48,1]]; // Remove 1.000.000
 		adminadd = adminadd + ["  Remove +80.000.000 coins",adminTakeCoins8,"0","0","0","1",[0.91,0.59,0.48,1]]; // Remove 1.000.000
 		adminadd = adminadd + ["","","0","1","0","0",[]];
-		adminadd = adminadd + ["  Remove +1.000 coins do Bank",adminTakeCoinsFromBank,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank		
-		adminadd = adminadd + ["  Remove +10.000 coins do Bank",adminTakeCoinsFromBank2,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank
-		adminadd = adminadd + ["  Remove +100.000 coins do Bank",adminTakeCoinsFromBank3,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank		
-		adminadd = adminadd + ["  Remove +1.000.000 coins do Bank",adminTakeCoinsFromBank4,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank
-		adminadd = adminadd + ["  Remove +10.000.000 coins do Bank",adminTakeCoinsFromBank5,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank
-		adminadd = adminadd + ["  Remove +20.000.000 coins do Bank",adminTakeCoinsFromBank6,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank
-		adminadd = adminadd + ["  Remove +40.000.000 coins do Bank",adminTakeCoinsFromBank7,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank
-		adminadd = adminadd + ["  Remove +80.000.000 coins do Bank",adminTakeCoinsFromBank8,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank
+		adminadd = adminadd + ["  Remove +1.000 coins from Bank",adminTakeCoinsFromBank,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank		
+		adminadd = adminadd + ["  Remove +10.000 coins from Bank",adminTakeCoinsFromBank2,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank
+		adminadd = adminadd + ["  Remove +100.000 coins from Bank",adminTakeCoinsFromBank3,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank		
+		adminadd = adminadd + ["  Remove +1.000.000 coins from Bank",adminTakeCoinsFromBank4,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank
+		adminadd = adminadd + ["  Remove +10.000.000 coins from Bank",adminTakeCoinsFromBank5,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank
+		adminadd = adminadd + ["  Remove +20.000.000 coins from Bank",adminTakeCoinsFromBank6,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank
+		adminadd = adminadd + ["  Remove +40.000.000 coins from Bank",adminTakeCoinsFromBank7,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank
+		adminadd = adminadd + ["  Remove +80.000.000 coins from Bank",adminTakeCoinsFromBank8,"0","0","0","1",[0.8,0.36,0.36,1]]; // Remove 1.000.000 from Bank
 		adminadd = adminadd + ["","","0","1","0","0",[]];
 	};
 };	

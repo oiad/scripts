@@ -97,6 +97,7 @@ if (!isNil "adminshowwaimenu") then {
 	adminadd = adminadd + ["  [WAI BANDIT] Vehicle Drop",{PVAH_AdminReq = [8000,player,"WAIBandit","vehicle_drop"]; publicVariableServer "PVAH_AdminReq";},"0","0","0","0",[1, 0.20, 0.20, 1]];
 	adminadd = adminadd + ["  [WAI BANDIT] Weapon Cache",{PVAH_AdminReq = [8000,player,"WAIBandit","weapon_cache"]; publicVariableServer "PVAH_AdminReq";},"0","0","0","0",[1, 0.20, 0.20, 1]];
 };
+
 _fnc = "-Missions DZMS";
 if (isNil 'adminshowdzmsmenu')then{_fnc = "+Missions DZMS";};
 adminadd = adminadd + [_fnc,{if(isNil "adminshowdzmsmenu")then{adminshowdzmsmenu = true;}else{adminshowdzmsmenu = nil;};call admin_update_ctrl2;},"0","0","0","0",[0,0.6,1,1]];
@@ -155,29 +156,29 @@ if (!isNil "adminshowdzmsmenu") then {
 
 On line 5468 or so of `AH.sqf` find this code block:
 ```sqf
-			} forEach _arrayforcrate;
-		};
+	} forEach _arrayforcrate;
+};
 ```
 
 Add this code block after it:
 ```sqf
-	if (_option == 8000) then {
-		_mtype = _array select 2;
-		_mname = _array select 3;
-		if (_mtype == "WAIHero" || {_mtype == "WAIBandit"}) then {
-			diag_log format ["%1 (%2) Spawning mission [%3] %4",name (_array select 1),getPlayerUID (_array select 1),_mtype,_mname];
-			wai_mission_markers set [(count wai_mission_markers), format ["Main%1%2",_mtype,count(wai_mission_data)]];
-			if (isNil "ai_show_count") then {wai_mission_data = wai_mission_data + [[0,"",[],[0,0,0]]];} else {wai_mission_data = wai_mission_data + [[0,[],[],[],[],[],[]]]};
-			[if (_mtype == "WAIBandit") then {"MainHero"} else {"MainBandit"},if (_mtype == "WAIBandit") then {"Bandit"} else {"Hero"}] execVM format ["\z\addons\dayz_server\WAI\missions\missions\%1.sqf",_mname];
-		};
-		if (_mtype == "event") then {
-			[] execVM "\z\addons\dayz_server\addons\modules\" + _mname + ".sqf";
-		};
-		if (_mtype == "DZMSHero" || {_mtype == "DZMSBandit"}) then {
-			diag_log format ["%1 (%2) Spawning mission [%3] %4",name (_array select 1),getPlayerUID (_array select 1),_mtype,_mname];
-			DZMSMarkers set [(count DZMSMarkers), format ["Main%1%2",_mtype,count(DZMSMissionData)]];
-			if (isNil "ai_show_count") then {DZMSMissionData = DZMSMissionData + [[0,"",[],[0,0,0]]];} else {DZMSMissionData = DZMSMissionData + [[0,[],[],[],[],[],[]]]};
-			[if (_mtype == "DZMSBandit") then {"MainHero"} else {"MainBandit"},if (_mtype == "DZMSBandit") then {"Bandit"} else {"Hero"}] execVM format ["\z\addons\dayz_server\DZMS\missions\%1.sqf",_mname];
-		};
+if (_option == 8000) then {
+	_mtype = _array select 2;
+	_mname = _array select 3;
+	if (_mtype == "WAIHero" || {_mtype == "WAIBandit"}) then {
+		diag_log format ["%1 (%2) Spawning mission [%3] %4",name (_array select 1),getPlayerUID (_array select 1),_mtype,_mname];
+		wai_mission_markers set [(count wai_mission_markers), format ["Main%1%2",_mtype,count(wai_mission_data)]];
+		if (isNil "ai_show_count") then {wai_mission_data = wai_mission_data + [[0,"",[],[0,0,0]]];} else {wai_mission_data = wai_mission_data + [[0,[],[],[],[],[],[]]]};
+		[if (_mtype == "WAIBandit") then {"MainHero"} else {"MainBandit"},if (_mtype == "WAIBandit") then {"Bandit"} else {"Hero"}] execVM format ["\z\addons\dayz_server\WAI\missions\missions\%1.sqf",_mname];
 	};
+	if (_mtype == "event") then {
+		[] execVM "\z\addons\dayz_server\addons\modules\" + _mname + ".sqf";
+	};
+	if (_mtype == "DZMSHero" || {_mtype == "DZMSBandit"}) then {
+		diag_log format ["%1 (%2) Spawning mission [%3] %4",name (_array select 1),getPlayerUID (_array select 1),_mtype,_mname];
+		DZMSMarkers set [(count DZMSMarkers), format ["Main%1%2",_mtype,count(DZMSMissionData)]];
+		if (isNil "ai_show_count") then {DZMSMissionData = DZMSMissionData + [[0,"",[],[0,0,0]]];} else {DZMSMissionData = DZMSMissionData + [[0,[],[],[],[],[],[]]]};
+		[if (_mtype == "DZMSBandit") then {"MainHero"} else {"MainBandit"},if (_mtype == "DZMSBandit") then {"Bandit"} else {"Hero"}] execVM format ["\z\addons\dayz_server\DZMS\missions\%1.sqf",_mname];
+	};
+};
 ```

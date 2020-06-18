@@ -42,19 +42,19 @@ Add this code block after it:
     adminadd = adminadd + [_fnc,{if(isNil "adminshowhumanidademenu")then{adminshowhumanidademenu = true;}else{adminshowhumanidademenu = nil;};call admin_update_ctrl2;},"0","0","0","0",[0.86,0.08,0.24,1]];
     if(!isNil "adminshowhumanidademenu")then
     {
-        adminadd = adminadd + ["  Dar 1.000 de Humanidade",adminHumanityPlus,"0","0","0","1",[0.56,0.93,0.56,1]];
-        adminadd = adminadd + ["  Dar 5.000 de Humanidade",adminHumanityPlus2,"0","0","0","1",[0.56,0.93,0.56,1]];
-        adminadd = adminadd + ["  Dar 10.000 de Humanidade",adminHumanityPlus3,"0","0","0","1",[0.56,0.93,0.56,1]];
-        adminadd = adminadd + ["  Dar 20.000 de Humanidade",adminHumanityPlus4,"0","0","0","1",[0.56,0.93,0.56,1]];
-        adminadd = adminadd + ["  Dar 40.000 de Humanidade",adminHumanityPlus5,"0","0","0","1",[0.56,0.93,0.56,1]];
-        adminadd = adminadd + ["  Dar 80.000 de Humanidade",adminHumanityPlus6,"0","0","0","1",[0.56,0.93,0.56,1]];
+        adminadd = adminadd + ["  Give 1.000 de Humanidade",adminHumanityPlus,"0","0","0","1",[0.56,0.93,0.56,1]];
+        adminadd = adminadd + ["  Give 5.000 de Humanidade",adminHumanityPlus2,"0","0","0","1",[0.56,0.93,0.56,1]];
+        adminadd = adminadd + ["  Give 10.000 de Humanidade",adminHumanityPlus3,"0","0","0","1",[0.56,0.93,0.56,1]];
+        adminadd = adminadd + ["  Give 20.000 de Humanidade",adminHumanityPlus4,"0","0","0","1",[0.56,0.93,0.56,1]];
+        adminadd = adminadd + ["  Give 40.000 de Humanidade",adminHumanityPlus5,"0","0","0","1",[0.56,0.93,0.56,1]];
+        adminadd = adminadd + ["  Give 80.000 de Humanidade",adminHumanityPlus6,"0","0","0","1",[0.56,0.93,0.56,1]];
         adminadd = adminadd + ["","","0","1","0","0",[]];
-        adminadd = adminadd + ["  Remover 1.000 de Humanidade",adminHumanityMinus,"0","0","0","1",[0.8,0.36,0.36,1]];   
-        adminadd = adminadd + ["  Remover 5.000 de Humanidade",adminHumanityMinus2,"0","0","0","1",[0.8,0.36,0.36,1]];  
-        adminadd = adminadd + ["  Remover 10.000 de Humanidade",adminHumanityMinus3,"0","0","0","1",[0.8,0.36,0.36,1]];
-        adminadd = adminadd + ["  Remover 20.000 de Humanidade",adminHumanityMinus4,"0","0","0","1",[0.8,0.36,0.36,1]]; 
-        adminadd = adminadd + ["  Remover 40.000 de Humanidade",adminHumanityMinus5,"0","0","0","1",[0.8,0.36,0.36,1]]; 
-        adminadd = adminadd + ["  Remover 80.000 de Humanidade",adminHumanityMinus6,"0","0","0","1",[0.8,0.36,0.36,1]];
+        adminadd = adminadd + ["  Remove 1.000 de Humanidade",adminHumanityMinus,"0","0","0","1",[0.8,0.36,0.36,1]];   
+        adminadd = adminadd + ["  Remove 5.000 de Humanidade",adminHumanityMinus2,"0","0","0","1",[0.8,0.36,0.36,1]];  
+        adminadd = adminadd + ["  Remove 10.000 de Humanidade",adminHumanityMinus3,"0","0","0","1",[0.8,0.36,0.36,1]];
+        adminadd = adminadd + ["  Remove 20.000 de Humanidade",adminHumanityMinus4,"0","0","0","1",[0.8,0.36,0.36,1]]; 
+        adminadd = adminadd + ["  Remove 40.000 de Humanidade",adminHumanityMinus5,"0","0","0","1",[0.8,0.36,0.36,1]]; 
+        adminadd = adminadd + ["  Remove 80.000 de Humanidade",adminHumanityMinus6,"0","0","0","1",[0.8,0.36,0.36,1]];
         adminadd = adminadd + ["","","0","1","0","0",[]];
     };	
 ```

@@ -16,8 +16,7 @@ This assumes your DZMS missions are located:
 
 On line 289 or so of `AT.sqf` find this code block:
 ```sqf
-			adminadd = adminadd + ["  Force Disconnect (Self)",{(findDisplay 46) closeDisplay 0;},"0","0","0","0",[]];
-		};
+adminadd = adminadd + ["  Force Disconnect (Self)",{(findDisplay 46) closeDisplay 0;},"0","0","0","0",[]];
 ```
 
 Add this code block after it:

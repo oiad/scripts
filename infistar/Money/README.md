@@ -37,7 +37,7 @@ _fnc = "-Misc";
 
 Add this code block after it:
 ```sqf
-		_fnc = "-Dinheiro";
+		_fnc = "-Money";
 		if(isNil 'adminshowdinheiromenu')then{_fnc = "+Dinheiro";};
 		adminadd = adminadd + [_fnc,{if(isNil "adminshowdinheiromenu")then{adminshowdinheiromenu = true;}else{adminshowdinheiromenu = nil;};call admin_update_ctrl2;},"0","0","0","0",[1,0.84,0,1]];
 		if(!isNil "adminshowdinheiromenu")then

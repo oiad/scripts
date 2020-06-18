@@ -85,6 +85,7 @@ Add this code block after it:
 };
 ```
 
+On line 4251 or so of `AT.sqf` find this code block:
 ```sqf
 	adminHumanityMinus =
 	{

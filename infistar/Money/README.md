@@ -87,49 +87,6 @@ Add this code block after it:
 
 On line 5468 or so of `AH.sqf` find this code block:
 ```sqf
-	changeHumanity =
-	{
-		disableSerialization;
-		_plr = objNull;	
-		{if(name _x == _this select 0)exitWith {_plr = _x;};} forEach playableUnits;
-		if(isNull _plr)exitWith {
-			systemchat 'Select a Player!';
-		};
-		if(isNull findDisplay 24)exitWith {
-			systemchat 'open the chat, type the Amount of Humanity you want to add (can be negative) and doubleClick again!';
-		};
-		_chat = (findDisplay 24) displayCtrl 101;
-		_txt = ctrlText _chat;
-		_num = 0;
-		if(_txt != '')then{
-			_num = parseNumber _txt;
-			if(typeName _num != 'SCALAR')then{systemchat 'INSERT A NUMBER!';};
-			(findDisplay 24) closeDisplay 0;
-		};
-		
-		_humanity = _plr getVariable['humanity',0];
-		_plr setVariable['humanity',_humanity+_num,true];
-		hint format['Gave %1 %2 Humanity!',_this select 0,_num];
-		
-		_sl = format['%1 %2 Humanity to %3',name player,_num,_this select 0];
-		PVAH_WriteLogReq = [player,toArray _sl];
-		publicVariableServer 'PVAH_WriteLogReq';
-	};
-	adminHumanityPlus =
-	{
-		{
-			if(name _x == _this select 0)then
-			{
-				_humanity = _x getVariable['humanity',0];
-				_x setVariable['humanity',_humanity+2500,true];
-				hint format['Gave %1 +2500 Humanity!',_this select 0];
-				
-				_sl = format['%1 plus 2500 Humanity to %2',name player,_this select 0];
-				PVAH_WriteLogReq = [player,toArray _sl];
-				publicVariableServer 'PVAH_WriteLogReq';
-			};
-		} forEach playableUnits;
-	};
 	adminHumanityMinus =
 	{
 		{

@@ -1,7 +1,7 @@
 fnc_Log
-Modular server/client logging function with logging DLL
+Pretty useful functions mainly geared towards logging purposes.
 
-<code>fnc_nearBy</code> Syntax:
+# <code>fnc_nearBy</code> Syntax:
 
 ```sqf
 	[_object,600] call fnc_nearBy;
@@ -13,7 +13,7 @@ results:
 nearBy: None
 nearBy: oiad (76561197999617086) [30m], oiad (76561197999617086) [220m] and oiad (76561197999617086) [440m]
 
-<code>fnc_nearPlot</code> syntax:
+# <code>fnc_nearPlot</code> syntax:
 
 ```sqf
 	_object call fnc_nearPlot;
@@ -25,7 +25,7 @@ results:
 nearPlot: None
 nearPlot: oiad (76561197999617086)
 
-<code>fnc_parseInventory</code> syntax:
+# <code>fnc_parseInventory</code> syntax:
 
 ```sqf
 	_inventory call fnc_parseInventory
@@ -37,7 +37,7 @@ results:
 inventory: None
 inventory: PartFueltank x2, PartVRotor x1, PartGeneric x2, PartEngine x1, PartGlass x10, 100Rnd_762x51_M240 x1, ItemAntibiotic5 x1 and ItemFuelBarrelEmpty x2
 
-<code>DZE_displayString</code> syntax:
+# <code>DZE_displayString</code> syntax:
 
 ```sqf
 	_array call DZE_displayString

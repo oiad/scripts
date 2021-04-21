@@ -34,7 +34,7 @@ fnc_nearPlot = {
 	_plotOwner = "";
 	_findNearestPole = [];
 
-	_findNearestPole = (vehicle _this) nearEntities ["Plastic_Pole_EP1_DZ", DZE_PlotPole select 0];
+	_findNearestPole = (vehicle _this) nearEntities ["Plastic_Pole_EP1_DZ", if (isServer) then {100} else {DZE_PlotPole select 0}];
 
 	if (count (_findNearestPole) > 0) then {
 		_nearestPlot = _findNearestPole select 0;
